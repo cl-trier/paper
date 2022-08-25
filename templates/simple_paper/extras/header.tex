@@ -1,0 +1,147 @@
+\documentclass[
+    pdftex,             % PDFTex 
+    a4paper,            % A4 Papier
+    oneside,            % einseitig
+    liststotoc,         % Verzeichnisse einbinden in toc
+    halfparskip,        % Abstand zwischen Absätzen
+    chapterprefix,      % Kapitel ausschreiben
+    headsepline,        % Linie nach Kopfzeile
+    %footsepline,       % Linie vor Fusszeile
+    pointlessnumbers,   % Nummern ohne abschließenden Punkt
+    12pt                % Schriftgröße
+]{scrbook}
+
+%
+% Randabstände
+%
+\usepackage[]{geometry}
+
+%
+% Paket Deutsch
+%
+\usepackage[ngerman]{babel}
+
+%
+% Pakete für UTF-8
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%
+% Anführungszeichen
+%
+\usepackage[babel,german=quotes]{csquotes}
+
+% 
+% Verweise mit Autor und Jahr
+%
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+
+%
+% Paket für Tabelleneigenschaften
+%
+\usepackage{array}
+
+%
+% Paket für Tabellen
+%
+\usepackage{booktabs}
+
+%
+% Paket für Grafiken
+%
+\usepackage{graphicx}
+
+%
+% Spezielle Schrift setzen
+%
+\setkomafont{sectioning}{\normalfont\bfseries}
+\setkomafont{captionlabel}{\normalfont\bfseries} 
+\setkomafont{pagehead}{\normalfont\fontsize{9.5pt}{11.4pt}} % Kopfzeilenschrift
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+
+%
+% Zeilenumbruch bei Bildbeschreibungen
+%
+\setcapindent{1em}
+
+%
+% Kopf und Fußzeilen
+%
+\usepackage[automark,autooneside=false]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+\ihead{\leftmark}
+\ohead{\rightmark}
+\chead{}
+
+%
+% Mathematische Symbole
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%
+% Type 1 Fonts für bessere Darstellung in PDF verwenden.
+%
+%\usepackage{mathptmx}           % Times
+\usepackage{helvet}              % Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{courier}             % Courier
+
+%
+% Paket für Farben im PDF
+%
+\usepackage{color}
+
+%
+% Paket für Links innerhalb des PDF Dokuments
+%
+\definecolor{LinkColor}{rgb}{0,0,0}
+\usepackage[%
+	pdftitle={Titel},                        % Titel der Arbeit
+	pdfauthor={Autor},                       % AutorIn
+	pdfcreator={LaTeX},                      % genutzte Programme
+	pdfsubject={Betreff},
+	pdfkeywords={Keywords}]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=LinkColor, 
+            citecolor=LinkColor, filecolor=LinkColor, 
+            menucolor=LinkColor, pagecolor=LinkColor, urlcolor=LinkColor}                                       
+
+%
+% Paket um Listings zu formatieren
+%
+\usepackage[savemem]{listings}
+\lstloadlanguages{TeX}
+
+
+%
+% Neue Umgebungen
+%
+\newenvironment{ListChanges}%
+	{\begin{list}{$\diamondsuit$}{}}%
+	{\end{list}}
+
+%
+% aller Bilder im Unterverzeichnis 'bilder' gesucht
+%
+\graphicspath{{bilder/}}
+
+%
+% Strukturiertiefe bis subsubsection{} möglich
+%
+\setcounter{secnumdepth}{3}
+
+%
+% Dargestellte Strukturiertiefe im Inhaltsverzeichnis
+%
+\setcounter{tocdepth}{3}
+
+%
+% Abkürzungsverzeichnis
+%
+\usepackage[intoc]{nomencl}
+\usepackage[toc]{glossaries}
+\makeglossaries
+\renewcommand*\glspostdescription{\dotfill}

@@ -1,0 +1,7 @@
+*.log
+*.lof
+*.lot
+*.glo
+*.aux
+*.glsdefs
+*.out

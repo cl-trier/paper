@@ -1,0 +1,70 @@
+% Die Titelseite
+
+\newcommand{\trtitle}{Natural Language Generation}
+\newcommand{\trtype}{Hausarbeit}
+\newcommand{\trauthor}{Max Mustermann}
+\newcommand{\trstrasse}{Univeritätsring 101}
+\newcommand{\trmatrikelnummer}{123456}
+\newcommand{\trort}{54290 Trier}
+\newcommand{\trbetreuer}{Dr. No}
+\newcommand{\trmodul}{BA2STT2212 Computerlinguistik}
+\newcommand{\trlehrveranstaltung}{Verfahren und Systeme der Computerlinguistik}
+
+
+\newcommand{\truni}{Universität Trier}
+\newcommand{\trfachbereich}{Fachbereich II}
+\newcommand{\trfach}{Computerlinguistik und Digital Humanities}
+\newcommand{\trdate}{\today}
+
+\thispagestyle{empty}
+
+% Kopfzeile mit Logos
+% Eventuell die \hspace{} je nach Logogröße anpassen
+\begin{tabular}{lcr}
+  \includegraphics[scale=0.6]{unilogo}
+\end{tabular}
+
+\rule{\textwidth}{0.4pt}
+
+\begin{center}
+  \textbf{\truni} \\
+  \trfachbereich \\
+  \trfach \\[0.5cm]
+\end{center}
+
+\vspace{2.5cm}
+
+\begin{center}
+  \textbf{\LARGE \trtitle}
+\end{center}
+
+\vspace{2cm}
+
+\begin{center}
+  \textbf{\trtype} \\
+  im Modul \trmodul \\
+  \trlehrveranstaltung \\[0.5cm]
+  
+  vorgelegt von \\
+  \textbf{\trauthor}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{tabular}{ll}
+Betreuer: & \trbetreuer \\
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+\vfill
+
+\begin{tabular}{l}
+\trauthor \\
+Matrikelnummer:  \trmatrikelnummer \\
+\trstrasse \\
+\trort
+\end{tabular}
+
+\rule{\textwidth}{0.4pt}
